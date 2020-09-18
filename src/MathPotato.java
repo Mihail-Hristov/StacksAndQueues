@@ -43,16 +43,15 @@ public class MathPotato {
 
         if (n == 0 || n == 1){
             primeCheck = false;
-            return primeCheck;
         }else {
-            for (int i = 2; i < Math.sqrt(n); i++) {
-                if (n % 2 == 0){
+            for (int i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0){
                     primeCheck = false;
                 }
             }
 
-            return primeCheck;
         }
+        return primeCheck;
 
     }
 }
